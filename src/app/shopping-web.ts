@@ -13,9 +13,5 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 ])
 export class ShoppingWebApp {
-  defaultMeaning: number = 42;
   
-  meaningOfLife(meaning?: number) {
-    return `The meaning of life is ${meaning || this.defaultMeaning}`;
-  }
 }
