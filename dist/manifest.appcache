@@ -1,15 +1,15 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: 0f4517e2f73d9263b910dfb5461a3a76f73471f8
-# sw.file.hash: 532582126f6c88b9b9abeed65704c945a3c5d0c3
+# sw.version: 161de0d2ff436fcc0f81f1568bc7e90e480368cc
+# sw.file.hash: fd531729c0ca979442fa6a9252a5517cd75310ad
 /app.js
-# sw.file.hash: 91573a7b80e85d29487f1e9029b7560e072c2642
+# sw.file.hash: c9916fd5de69da6dde733d088915227c70e7d0e2
 /app.js.map
-# sw.file.hash: 42849253f32cf6c6098dfe5b8d64dfdf78c3fd98
+# sw.file.hash: 616fe473c17c2b446a59925c5f310c6d06ba9a06
 /app.ts
-# sw.file.hash: c6d9aeba2f92ce31daee2769958103fd1df0026b
+# sw.file.hash: 4afb65311dbefd2a57c3afd5c36398fb1a577fab
 /app/services/catalog-service/catalog-service.js
-# sw.file.hash: 1fb4b93ffc110991512a4586a61209231e0e584c
+# sw.file.hash: b334b64031c6145ff142ec5cdeb089100958699e
 /app/services/catalog-service/catalog-service.js.map
 # sw.file.hash: 2dbf57093b4b6949095f9959b8667e1573f73c8d
 /app/services/catalog-service/catalog-service.spec.js
@@ -17,21 +17,21 @@ CACHE MANIFEST
 /app/services/catalog-service/catalog-service.spec.js.map
 # sw.file.hash: dd2364d84d1e5a5c73b0d791fa86425a09d740bc
 /app/services/catalog-service/catalog-service.spec.ts
-# sw.file.hash: d20cf3073b33d0fcf9b9612b136604ed954f47ab
+# sw.file.hash: 7241b47b52be5551079bd1d00d0bb33ac45db245
 /app/services/catalog-service/catalog-service.ts
-# sw.file.hash: 5463cce5e202fd0d33f546f47b94ba9ff9253ae3
+# sw.file.hash: 0d72719bf7dcdb111a028d0146edac248ccf034d
 /app/shopping-web.html
-# sw.file.hash: 575546bdda5190acca3dc86b31fcb39fbace5f67
+# sw.file.hash: bde68bab9ca075c621ad944e54c059b7c62ec693
 /app/shopping-web.js
-# sw.file.hash: 5cf38d604fa79c8c496b3cc55c3844c73ed2a046
+# sw.file.hash: 630ba2e1a111a5e50ca19d6926c737abc2ad10fe
 /app/shopping-web.js.map
-# sw.file.hash: f0e33d48421a855e385c1d7427707d31abf543e7
+# sw.file.hash: b67a004ffca134bd544e1f473b0642655b86f959
 /app/shopping-web.ts
 # sw.file.hash: 96460bec6029b061e2cba87fa4c2ea9b4c529052
 /browser.js
 # sw.file.hash: 84161b857f5c547e3699ddfbffc6d8d737542e01
 /favicon.ico
-# sw.file.hash: 6fa6a0ac136e274263dd2a5f465424eaa39dafce
+# sw.file.hash: 3e260c7a535d53b3b81e62e88349bc77894c1fa6
 /index.html
 # sw.file.hash: da39a3ee5e6b4b0d3255bfef95601890afd80709
 /thirdparty/libs.js

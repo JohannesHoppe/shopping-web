@@ -19,38 +19,43 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             CatalogService = (function () {
-                function CatalogService() {
-                    /*const DISCOVERY_SERVERS = [
-                      'http://46.101.251.23:8500',
+                function CatalogService(window) {
+                    var agent = window['multiagent'];
+                    console.log(agent.client);
+                    var DISCOVERY_SERVERS = [
+                        'http://46.101.251.23:8500',
                     ];
-                
-                    this.client = agent.client({
-                      discovery: 'consul',
-                      discoveryServers: DISCOVERY_SERVERS,
-                      discoveryStrategy: 'randomly',
-                      serviceName: 'shopping-web',
-                      serviceStrategy: 'randomly'
-                    });*/
+                    this.catalogclient = agent.client({
+                        discovery: 'consul',
+                        discoveryServers: DISCOVERY_SERVERS,
+                        discoveryStrategy: 'randomly',
+                        serviceName: 'catalog-service',
+                        serviceStrategy: 'randomly'
+                    });
+                    this.cartclient = agent.client({
+                        discovery: 'consul',
+                        discoveryServers: DISCOVERY_SERVERS,
+                        discoveryStrategy: 'randomly',
+                        serviceName: 'cart-service',
+                        serviceStrategy: 'randomly'
+                    });
                 }
                 CatalogService.prototype.getAll = function () {
-                    return {
-                        products: [{
-                                productId: 'abc',
-                                title: 'Foobar',
-                                price: 12.56
-                            }, {
-                                productId: 'xyz',
-                                title: 'Foobaz',
-                                price: 7.99
-                            }]
-                    };
+                    return this.catalogclient.get('/products');
                 };
                 CatalogService.prototype.setCart = function (cart) {
-                    //send post request
+                    var endpoint;
+                    if (cart.cartId) {
+                        endpoint = '/carts/' + cart.cartId;
+                    }
+                    else {
+                        endpoint = '/carts';
+                    }
+                    return this.cartclient.post(endpoint, cart);
                 };
                 CatalogService = __decorate([
                     core_1.Injectable(), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [Window])
                 ], CatalogService);
                 return CatalogService;
             }());

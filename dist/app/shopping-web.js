@@ -29,10 +29,13 @@ System.register(['angular2/core', 'angular2/common', 'angular2/router', './servi
         execute: function() {
             ShoppingWebApp = (function () {
                 function ShoppingWebApp(catalog) {
+                    var _this = this;
+                    this.catalog = catalog;
                     this.cart = { products: [] };
-                    this.products = catalog.getAll();
+                    this.catalog.getAll().then(function (res) { return _this.products = res.body.products; });
                 }
                 ShoppingWebApp.prototype.addToCart = function (id) {
+                    var _this = this;
                     var p = this.cart.products.find(function (e) { return e.productId == id; });
                     //if product is not in cart
                     if (!p) {
@@ -43,7 +46,7 @@ System.register(['angular2/core', 'angular2/common', 'angular2/router', './servi
                     else {
                         p.quantity++;
                     }
-                    console.log(this.cart);
+                    this.catalog.setCart(this.cart).then(function (res) { return _this.cart = JSON.parse(res.text); });
                 };
                 ShoppingWebApp = __decorate([
                     core_1.Component({

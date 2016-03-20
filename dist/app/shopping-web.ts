@@ -20,8 +20,8 @@ export class ShoppingWebApp {
   client:any;
 
 
-  constructor(catalog: CatalogService){
-      this.products = catalog.getAll();
+  constructor(private catalog: CatalogService){
+      this.catalog.getAll().then(res => this.products = res.body.products);
   }
 
   addToCart(id:string){
@@ -40,7 +40,7 @@ export class ShoppingWebApp {
 
     }
 
-    console.log(this.cart);
+    this.catalog.setCart(this.cart).then(res => this.cart = JSON.parse(res.text));
 
   }
 

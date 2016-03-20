@@ -4,39 +4,51 @@ import {Http} from 'angular2/http';
 
 @Injectable()
 export class CatalogService {
+  catalogclient:any;
+  cartclient:any;
 
-  constructor() {
-    /*const DISCOVERY_SERVERS = [
+
+  constructor(window: Window) {
+    var agent = window['multiagent'];
+    console.log(agent.client);
+
+    const DISCOVERY_SERVERS = [
       'http://46.101.251.23:8500',
     ];
 
-    this.client = agent.client({
+    this.catalogclient = agent.client({
       discovery: 'consul',
       discoveryServers: DISCOVERY_SERVERS,
       discoveryStrategy: 'randomly',
-      serviceName: 'shopping-web',
+      serviceName: 'catalog-service',
       serviceStrategy: 'randomly'
-    });*/
+    });
+
+
+    this.cartclient = agent.client({
+      discovery: 'consul',
+      discoveryServers: DISCOVERY_SERVERS,
+      discoveryStrategy: 'randomly',
+      serviceName: 'cart-service',
+      serviceStrategy: 'randomly'
+    });
 
   }
 
   getAll() {
-    return{
-      products: [{
-        productId: 'abc',
-        title: 'Foobar',
-        price: 12.56
-      }, {
-        productId: 'xyz',
-        title: 'Foobaz',
-        price: 7.99
-      }]
-    }
+    return this.catalogclient.get('/products');
   }
 
 
   setCart(cart) {
-    //send post request
+    var endpoint;
+    if(cart.cartId){
+      endpoint = '/carts/' + cart.cartId;
+    }else{
+      endpoint = '/carts';
+    }
+
+    return this.cartclient.post(endpoint, cart);
   }
 
 

@@ -10,7 +10,7 @@
 
 
 <h2>Produkte</h2>
-<div *ngFor="#p of products.products" style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid black;">
+<div *ngFor="#p of products?.products" style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid black;">
   {{ p.title }}
   ({{ p.price }} EUR)
   <button type="button" (click)="addToCart(p.productId)">In den Warenkorb</button>
