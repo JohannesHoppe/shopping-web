@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: 161de0d2ff436fcc0f81f1568bc7e90e480368cc
+# sw.version: 74f95cc9066789b13084888994a740f758c96c2e
 # sw.file.hash: fd531729c0ca979442fa6a9252a5517cd75310ad
 /app.js
 # sw.file.hash: c9916fd5de69da6dde733d088915227c70e7d0e2
@@ -19,7 +19,7 @@ CACHE MANIFEST
 /app/services/catalog-service/catalog-service.spec.ts
 # sw.file.hash: 7241b47b52be5551079bd1d00d0bb33ac45db245
 /app/services/catalog-service/catalog-service.ts
-# sw.file.hash: 0d72719bf7dcdb111a028d0146edac248ccf034d
+# sw.file.hash: 011ba56d6c802851a13df5bf216c11045f67ffab
 /app/shopping-web.html
 # sw.file.hash: bde68bab9ca075c621ad944e54c059b7c62ec693
 /app/shopping-web.js
