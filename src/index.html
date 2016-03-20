@@ -6,7 +6,7 @@
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
@@ -35,14 +35,29 @@
   <script src="thirdparty/libs.js"></script>
   <script>
     System.config({
+     paths: {
+        'node_modules/*': 'vendor/*'
+      },
       packages: {
         app: {
           format: 'register',
           defaultExtension: 'js'
+        },
+        'vendor': {
+          format: 'cjs',
+          defaultExtension: 'js'
         }
       }
     });
-    System.import('app.js').then(null, console.error.bind(console));
+
+    System
+      .import('node_modules/multiagent/lib/browser')
+      .then(function() {
+        System
+          .import('app.js')
+          .then(null, console.error.bind(console));
+    }, console.error.bind(console));
+
   </script>
 </body>
 </html>
