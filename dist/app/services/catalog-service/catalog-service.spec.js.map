@@ -1,0 +1,1 @@
+{"version":3,"file":"catalog-service.spec.js","sourceRoot":"/","sources":["app/services/catalog-service/catalog-service.spec.ts"],"names":[],"mappings":";;;;;;;;;;;;;YAeA,kBAAQ,CAAC,wBAAwB,EAAE;gBAEjC,6BAAmB,CAAC,cAAM,OAAA,CAAC,gCAAc,CAAC,EAAhB,CAAgB,CAAC,CAAC;gBAG5C,YAAE,CAAC,YAAY,EAAE,gBAAM,CAAC,CAAC,gCAAc,CAAC,EAAE,UAAC,OAAsB;gBAEjE,CAAC,CAAC,CAAC,CAAC;YAEN,CAAC,CAAC,CAAC"}

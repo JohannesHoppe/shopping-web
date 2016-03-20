@@ -1,29 +1,37 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: d8b7e72443a99c8115b4e59ee912a5b7ebc1c915
+# sw.version: 0f4517e2f73d9263b910dfb5461a3a76f73471f8
 # sw.file.hash: 532582126f6c88b9b9abeed65704c945a3c5d0c3
 /app.js
 # sw.file.hash: 91573a7b80e85d29487f1e9029b7560e072c2642
 /app.js.map
 # sw.file.hash: 42849253f32cf6c6098dfe5b8d64dfdf78c3fd98
 /app.ts
-# sw.file.hash: 923f12219f822dd4b543975c15e1af768200a107
+# sw.file.hash: c6d9aeba2f92ce31daee2769958103fd1df0026b
+/app/services/catalog-service/catalog-service.js
+# sw.file.hash: 1fb4b93ffc110991512a4586a61209231e0e584c
+/app/services/catalog-service/catalog-service.js.map
+# sw.file.hash: 2dbf57093b4b6949095f9959b8667e1573f73c8d
+/app/services/catalog-service/catalog-service.spec.js
+# sw.file.hash: 1a1231cda8f6e770407305303d83c30b81372cca
+/app/services/catalog-service/catalog-service.spec.js.map
+# sw.file.hash: dd2364d84d1e5a5c73b0d791fa86425a09d740bc
+/app/services/catalog-service/catalog-service.spec.ts
+# sw.file.hash: d20cf3073b33d0fcf9b9612b136604ed954f47ab
+/app/services/catalog-service/catalog-service.ts
+# sw.file.hash: 5463cce5e202fd0d33f546f47b94ba9ff9253ae3
 /app/shopping-web.html
-# sw.file.hash: fb53d1081b5ea24fed222d0c337bcb64d63a4ddf
+# sw.file.hash: 575546bdda5190acca3dc86b31fcb39fbace5f67
 /app/shopping-web.js
-# sw.file.hash: 39c73a94955325ba9ac4a5bba1f8420a675712ce
+# sw.file.hash: 5cf38d604fa79c8c496b3cc55c3844c73ed2a046
 /app/shopping-web.js.map
-# sw.file.hash: f67030a33fa1614b53e23200a4d8b5d3812dc7be
-/app/shopping-web.spec.js
-# sw.file.hash: e59e1eaa01616b13f9b77bd6c77d937cdc6fa6f2
-/app/shopping-web.spec.js.map
-# sw.file.hash: e5a67095d36303adf1c8f06cd992c3544fdd11d9
-/app/shopping-web.spec.ts
-# sw.file.hash: aa053846e73fcc4bba2624a53ce1001e851a9414
+# sw.file.hash: f0e33d48421a855e385c1d7427707d31abf543e7
 /app/shopping-web.ts
+# sw.file.hash: 96460bec6029b061e2cba87fa4c2ea9b4c529052
+/browser.js
 # sw.file.hash: 84161b857f5c547e3699ddfbffc6d8d737542e01
 /favicon.ico
-# sw.file.hash: 67516ca77d3824f484fea69fe685961e35273221
+# sw.file.hash: 6fa6a0ac136e274263dd2a5f465424eaa39dafce
 /index.html
 # sw.file.hash: da39a3ee5e6b4b0d3255bfef95601890afd80709
 /thirdparty/libs.js

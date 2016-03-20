@@ -1,17 +1,49 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {CORE_DIRECTIVES} from 'angular2/common';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router'
+import {CatalogService} from './services/catalog-service/catalog-service';
 
 
 @Component({
   selector: 'shopping-web-app',
-  providers: [],
+  providers: [CatalogService],
   templateUrl: 'app/shopping-web.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, CORE_DIRECTIVES],
   pipes: []
 })
 @RouteConfig([
 
 ])
 export class ShoppingWebApp {
-  
+  products:any;
+  cart:any = {products:[]}
+  client:any;
+
+
+  constructor(catalog: CatalogService){
+      this.products = catalog.getAll();
+  }
+
+  addToCart(id:string){
+
+    var p = this.cart.products.find(e => e.productId == id);
+
+    //if product is not in cart
+    if(!p){
+      var newp = this.products.products.find(e => e.productId == id);
+      newp.quantity = 1;
+
+      this.cart.products.push(newp);
+
+    }else{ //if product is already in cart
+      p.quantity++;
+
+    }
+
+    console.log(this.cart);
+
+  }
+
+
+
 }
